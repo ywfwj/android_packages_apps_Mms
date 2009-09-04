@@ -22,10 +22,13 @@ import com.google.android.mms.pdu.PduHeaders;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.util.Log;
 
 /**
  * With this activity, users can set preferences for MMS and SMS and
@@ -63,6 +66,8 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String BLACK_BACKGROUND         = "pref_key_mms_black_background";
     public static final String SIGNATURE                = "pref_key_mms_signature";
     public static final String SIGNATURE_AUTO_APPEND    = "pref_key_mms_signature_auto_append";
+    public static final String NOTIFICATION_LED             = "pref_key_mms_notification_led";
+    public static final String NOTIFICATION_LED_COLOR       = "pref_key_mms_notification_led_color";
 
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS    = 1;
@@ -184,5 +189,14 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
         } else {
             throw new IllegalArgumentException("Unknown MMS resubmission mode.");
         }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        //Log.v("onPreferenceTreeClick", "preferenceScreen: " + preferenceScreen.toString());
+        Log.v("onPreferenceTreeClick", "preference: " + preference.toString());
+        //preference.getSharedPreferences().;
+        Log.v("preference.getKey().toString()", preference.getKey().toString());
+        return false;
     }
 }
