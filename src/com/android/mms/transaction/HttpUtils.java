@@ -16,6 +16,11 @@
  */
 
 package com.android.mms.transaction;
+
+import com.android.mms.R;
+import com.android.mms.ui.MessagingPreferenceActivity;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpRequest;
@@ -75,6 +80,7 @@ public class HttpUtils {
     // Shared Preferences used for MMS User Agent
     static SharedPreferences prefs;
     static String userAgent;
+    private static String mUserAgent;
 
     private HttpUtils() {
         // To forbidden instantiate this class.
@@ -99,15 +105,17 @@ public class HttpUtils {
         if (url == null) {
             throw new IllegalArgumentException("URL must not be null.");
         }
-
         // Get Shared Preferences and User Defined User Agent for MMS
-        prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        userAgent = prefs.getString(MessagingPreferenceActivity.USERAGENT, "KUBA" );
-
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        mUserAgent = prefs.getString(MessagingPreferenceActivity.USER_AGENT, context.getString(R.string.pref_key_mms_user_agent_default));
+        if (mUserAgent.equals("custom")) {
+            mUserAgent = prefs.getString(MessagingPreferenceActivity.USER_AGENT_CUSTOM, context.getString(R.string.pref_key_mms_user_agent_default));
+        }
         if (LOCAL_LOGV) {
             Log.v(TAG, "httpConnection: params list");
             Log.v(TAG, "\tUserAgent\t\t=" + userAgent);
             Log.v(TAG, "\ttoken\t\t= " + token);
+            Log.v(TAG, "\tuser-agent\t\t=" + mUserAgent);
             Log.v(TAG, "\turl\t\t= " + url);
             Log.v(TAG, "\tmethod\t\t= "
                     + ((method == HTTP_POST_METHOD) ? "POST"
@@ -227,8 +235,7 @@ public class HttpUtils {
     }
 
     private static AndroidHttpClient createHttpClient() {
-        AndroidHttpClient client
-                = AndroidHttpClient.newInstance(userAgent);
+        AndroidHttpClient client = AndroidHttpClient.newInstance(mUserAgent);
         HttpParams params = client.getParams();
         HttpProtocolParams.setContentCharset(params, "UTF-8");
         return client;
