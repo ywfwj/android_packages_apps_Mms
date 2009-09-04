@@ -30,6 +30,9 @@ import org.apache.http.params.HttpProtocolParams;
 
 import com.android.mms.MmsConfig;
 
+import com.android.mms.ui.MessagingPreferenceActivity;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 import android.content.Context;
 import android.net.http.AndroidHttpClient;
 import android.provider.Settings;
@@ -69,6 +72,10 @@ public class HttpUtils {
     private static final String HDR_VALUE_ACCEPT =
         "*/*, application/vnd.wap.mms-message, application/vnd.wap.sic";
 
+    // Shared Preferences used for MMS User Agent
+    static SharedPreferences prefs;
+    static String userAgent;
+
     private HttpUtils() {
         // To forbidden instantiate this class.
     }
@@ -93,8 +100,13 @@ public class HttpUtils {
             throw new IllegalArgumentException("URL must not be null.");
         }
 
+        // Get Shared Preferences and User Defined User Agent for MMS
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        userAgent = prefs.getString(MessagingPreferenceActivity.USERAGENT, "KUBA" );
+
         if (LOCAL_LOGV) {
             Log.v(TAG, "httpConnection: params list");
+            Log.v(TAG, "\tUserAgent\t\t=" + userAgent);
             Log.v(TAG, "\ttoken\t\t= " + token);
             Log.v(TAG, "\turl\t\t= " + url);
             Log.v(TAG, "\tmethod\t\t= "
@@ -216,7 +228,7 @@ public class HttpUtils {
 
     private static AndroidHttpClient createHttpClient() {
         AndroidHttpClient client
-                = AndroidHttpClient.newInstance("Android-Mms/0.1");
+                = AndroidHttpClient.newInstance(userAgent);
         HttpParams params = client.getParams();
         HttpProtocolParams.setContentCharset(params, "UTF-8");
         return client;
