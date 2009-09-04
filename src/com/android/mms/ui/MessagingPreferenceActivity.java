@@ -55,6 +55,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity {
     public static final String SMS_DELIVERY_REPORT_MODE = "pref_key_sms_delivery_reports";
     public static final String NOTIFICATION_ENABLED     = "pref_key_enable_notifications";
     public static final String NOTIFICATION_VIBRATE     = "pref_key_vibrate";
+    public static final String NOTIFICATION_VIBRATE_PATTERN = "pref_key_mms_notification_vibrate_pattern";
     public static final String NOTIFICATION_SOUND       = "pref_key_sound";
     public static final String NOTIFICATION_RINGTONE    = "pref_key_ringtone";
     public static final String AUTO_RETRIEVAL           = "pref_key_mms_auto_retrieval";
