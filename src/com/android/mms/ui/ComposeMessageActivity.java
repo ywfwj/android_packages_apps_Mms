@@ -121,6 +121,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -166,6 +167,7 @@ public class ComposeMessageActivity extends Activity
     public static final int REQUEST_CODE_ATTACH_SOUND     = 14;
     public static final int REQUEST_CODE_RECORD_SOUND     = 15;
     public static final int REQUEST_CODE_CREATE_SLIDESHOW = 16;
+    public static final int REQUEST_CODE_SELECT_PHONE     = 20;   //for select phone by cytown
 
     private static final String TAG = "ComposeMessageActivity";
     private static final boolean DEBUG = false;
@@ -274,6 +276,8 @@ public class ComposeMessageActivity extends Activity
 
     private RecipientList mRecipientList;        // List of recipients for this conversation
     private RecipientsEditor mRecipientsEditor;  // UI control for editing recipients
+
+    private ImageButton mSelectButton;           // ImageButton for select phone from contacts by cytown
 
     private boolean mIsKeyboardOpen;             // Whether the hardware keyboard is visible
     private boolean mIsLandscape;                // Whether we're in landscape mode
@@ -1534,7 +1538,9 @@ public class ComposeMessageActivity extends Activity
         }
         ViewStub stub = (ViewStub)findViewById(R.id.recipients_editor_stub);
         if (stub != null) {
-            mRecipientsEditor = (RecipientsEditor) stub.inflate();
+            //mRecipientsEditor = (RecipientsEditor) stub.inflate();
+            LinearLayout ll = (LinearLayout) stub.inflate();
+            mRecipientsEditor = (RecipientsEditor)findViewById(R.id.recipients_editor);
         } else {
             mRecipientsEditor = (RecipientsEditor)findViewById(R.id.recipients_editor);
             mRecipientsEditor.setVisibility(View.VISIBLE);
@@ -1564,6 +1570,9 @@ public class ComposeMessageActivity extends Activity
                 }
             }
         });
+
+        mSelectButton = (ImageButton)findViewById(R.id.btn_select);
+        mSelectButton.setOnClickListener(this);
 
         mTopPanel.setVisibility(View.VISIBLE);
     }
@@ -2361,6 +2370,17 @@ public class ComposeMessageActivity extends Activity
                 }
                 break;
 
+            case REQUEST_CODE_SELECT_PHONE:
+                Cursor cursor = getContentResolver().query(data.getData(), new String[] { Contacts.PhonesColumns.NUMBER }, null, null,
+                        null);
+                if ((cursor == null) || (!cursor.moveToFirst())) {
+                    Log.v(TAG, "onActivityResult: bad contact data, no results found.");
+                    return;
+                }
+                String phone = cursor.getString(0);
+                Log.v(TAG, phone);
+                mRecipientsEditor.setText(mRecipientsEditor.getText() + phone + ", ");
+                break;
             default:
                 // TODO
                 break;
@@ -2585,6 +2605,10 @@ public class ComposeMessageActivity extends Activity
     public void onClick(View v) {
         if ((v == mSendButton) && isPreparedForSending()) {
             confirmSendMessageIfNeeded();
+        } else if (v == mSelectButton) {
+            Intent contactListIntent = new Intent(Intent.ACTION_GET_CONTENT);
+            contactListIntent.setType(Contacts.Phones.CONTENT_ITEM_TYPE);
+            this.startActivityForResult(contactListIntent, REQUEST_CODE_SELECT_PHONE);
         }
     }
 

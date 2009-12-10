@@ -18,11 +18,23 @@
  */
 -->
 
-<com.android.mms.ui.RecipientsEditor
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+<com.android.mms.ui.RecipientsEditor
     android:id="@+id/recipients_editor"
     android:hint="@string/to_hint"
     android:layout_width="fill_parent"
+    android:layout_weight="1.0"
     android:layout_height="wrap_content"
     android:inputType="textFilter"
     />
+<ImageButton
+    android:id="@+id/btn_select"
+    style="?android:attr/buttonStyle"
+    android:src="@drawable/ic_menu_contact"
+    android:layout_width="48px"
+    android:layout_height="48px"
+    android:scaleType="fitXY" />
+</LinearLayout>
