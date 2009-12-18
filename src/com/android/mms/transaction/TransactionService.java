@@ -186,7 +186,7 @@ public class TransactionService extends Service implements Observer {
     }
 
     @Override
-    public void onStart(Intent intent, int startId) {
+    public int onStartCommand(Intent intent, int flags, int startId) {
         if (Log.isLoggable(MmsApp.LOG_TAG, Log.VERBOSE)) {
             Log.v(TAG, "onStart: #" + startId + ": " + intent.getExtras());
         }
@@ -207,7 +207,7 @@ public class TransactionService extends Service implements Observer {
                         }
                         RetryScheduler.setRetryAlarm(this);
                         stopSelfIfIdle(startId);
-                        return;
+                        return Service.START_NOT_STICKY;
                     }
 
                     int columnIndexOfMsgId = cursor.getColumnIndexOrThrow(
@@ -220,7 +220,7 @@ public class TransactionService extends Service implements Observer {
                         int transactionType = getTransactionType(msgType);
                         if (noNetwork) {
                             onNetworkUnavailable(startId, transactionType);
-                            return;
+                            return Service.START_NOT_STICKY;
                         }
                         switch (transactionType) {
                             case -1:
@@ -266,6 +266,7 @@ public class TransactionService extends Service implements Observer {
             TransactionBundle args = new TransactionBundle(intent.getExtras());
             launchTransaction(startId, args, noNetwork);
         }
+	return Service.START_NOT_STICKY;
     }
 
     private void stopSelfIfIdle(int startId) {

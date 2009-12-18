@@ -116,17 +116,14 @@ public class SmsReceiverService extends Service {
     }
 
     @Override
-    public void onStart(Intent intent, int startId) {
-        if (Log.isLoggable(MmsApp.LOG_TAG, Log.VERBOSE)) {
-            Log.v(TAG, "onStart: #" + startId + ": " + intent.getExtras());
-        }
-
-        mResultCode = intent.getIntExtra("result", 0);
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        mResultCode = intent != null ? intent.getIntExtra("result", 0) : 0;
 
         Message msg = mServiceHandler.obtainMessage();
         msg.arg1 = startId;
         msg.obj = intent;
         mServiceHandler.sendMessage(msg);
+        return Service.START_NOT_STICKY;
     }
 
     @Override
