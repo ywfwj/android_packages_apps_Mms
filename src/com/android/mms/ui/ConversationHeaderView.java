@@ -78,7 +78,6 @@ public class ConversationHeaderView extends RelativeLayout {
 
         mDateView = (TextView) findViewById(R.id.date);
         mAttachmentView = findViewById(R.id.attachment);
-        mUnreadIndicator = findViewById(R.id.unread_indicator);
         mErrorIndicator = findViewById(R.id.error);
         mPresenceView = (ImageView) findViewById(R.id.presence);
     }
@@ -181,6 +180,12 @@ public class ConversationHeaderView extends RelativeLayout {
         ConversationHeader oldHeader = getConversationHeader();
         setConversationHeader(ch);
 
+        Drawable background = ch.isRead()?
+                mContext.getResources().getDrawable(R.drawable.conversation_item_background_read) :
+                mContext.getResources().getDrawable(R.drawable.conversation_item_background_unread);
+
+        setBackgroundDrawable(background);
+
         LayoutParams attachmentLayout = (LayoutParams)mAttachmentView.getLayoutParams();
         boolean hasError = ch.hasError();
         // When there's an error icon, the attachment icon is left of the error icon.
@@ -206,8 +211,6 @@ public class ConversationHeaderView extends RelativeLayout {
         if (ch.getFrom() == null) {
             ch.setWaitingView(this);
         }
-
-        mUnreadIndicator.setVisibility(ch.isRead() ? INVISIBLE : VISIBLE);
 
         // Subject
         mSubjectView.setText(ch.getSubject());
