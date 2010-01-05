@@ -38,6 +38,7 @@ import com.google.android.mms.util.SqliteWrapper;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Handler;
 import android.provider.Telephony.Mms.Inbox;
 import android.util.Config;
 import android.util.Log;
@@ -115,7 +116,7 @@ public class NotificationTransaction extends Transaction implements Runnable {
      */
     @Override
     public void process() {
-        new Thread(this).start();
+      new Handler().post(this);
     }
 
     public void run() {
