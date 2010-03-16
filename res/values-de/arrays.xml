@@ -71,8 +71,8 @@
     <item>Normal</item>
     <item>Mittel</item>
     <item>Lang</item>
-    <item>Kurz mehrmahls</item>
-    <item>Lang mehrmahls</item>
+    <item>Kurz mehrmals</item>
+    <item>Lang mehrmals</item>
   </string-array>
 
   <string-array name="pref_mms_notification_led_blink_rate_entries">
