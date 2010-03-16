@@ -37,6 +37,14 @@
       <item>:-X</item>   <!-- 14: Lips are sealed -->
       <item>:-D</item>   <!-- 15: Laughing -->
       <item>o_O</item>   <!-- 16: Confused -->
+	  <item>:)</item>   <!-- 17: Happy -->
+      <item>:(</item>   <!-- 18: Sad -->
+      <item>;)</item>   <!-- 19: Winking -->
+      <item>:P</item>   <!-- 20: Tongue sticking out -->
+	  <item>:p</item>   <!-- 21: Tongue sticking out -->
+	  <item>:X</item>   <!-- 22: Lips are sealed -->
+	  <item>:x</item>   <!-- 23: Lips are sealed -->
+	  <item>:$</item>   <!-- 24: Embarrassed -->
     </string-array>
 
     <!-- NOTE: if you change anything about this array, you must make the corresponding change
@@ -60,6 +68,14 @@
         <item>Lips are sealed</item>         <!-- 14: :-X -->
         <item>Laughing</item>                <!-- 15: :-D -->
         <item>Confused</item>                <!-- 16: o_O -->
+		<item>Happy</item>                   <!-- 17: :) -->
+        <item>Sad</item>                     <!-- 18: :( -->
+        <item>Winking</item>                 <!-- 19: ;) -->
+        <item>Tongue sticking out</item>     <!-- 20: :P -->
+		<item>Tongue sticking out</item>     <!-- 21: :p -->
+		<item>Lips are sealed</item>         <!-- 22: :X -->
+		<item>Lips are sealed</item>         <!-- 23: :x -->
+		<item>Embarrassed</item>             <!-- 24: :$ -->
     </string-array>
 
     <string-array name="pref_mms_notification_led_color_entries">
