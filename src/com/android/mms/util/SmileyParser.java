@@ -72,14 +72,6 @@ public class SmileyParser {
         Smileys.getSmileyResource(Smileys.LIPS_ARE_SEALED),      //  14
         Smileys.getSmileyResource(Smileys.LAUGHING),             //  15
         Smileys.getSmileyResource(Smileys.WTF),                   //  16
-		Smileys.getSmileyResource(Smileys.HAPPY),                //  17
-        Smileys.getSmileyResource(Smileys.SAD),                  //  18
-        Smileys.getSmileyResource(Smileys.WINKING),              //  19
-        Smileys.getSmileyResource(Smileys.TONGUE_STICKING_OUT),  //  20
-		Smileys.getSmileyResource(Smileys.TONGUE_STICKING_OUT),  //  21
-		Smileys.getSmileyResource(Smileys.LIPS_ARE_SEALED),      //  22
-		Smileys.getSmileyResource(Smileys.LIPS_ARE_SEALED),      //  23
-        Smileys.getSmileyResource(Smileys.EMBARRASSED),          //  24
     };
     
     public static final int DEFAULT_SMILEY_TEXTS = R.array.default_smiley_texts;
