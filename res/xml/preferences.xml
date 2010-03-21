@@ -153,7 +153,7 @@
                         android:defaultValue="false" />
     <com.android.mms.preferences.UserAgentListPreference
                         android:key="pref_key_mms_user_agent"
-                        android:defaultValue="@string/pref_key_mms_user_agent_default"
+                        android:defaultValue="default"
                         android:title="@string/pref_title_mms_user_agent"
                         android:summary="@string/pref_summary_mms_user_agent"
                         android:entries="@array/pref_mms_user_agent_entries"

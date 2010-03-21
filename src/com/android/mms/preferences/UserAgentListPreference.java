@@ -1,5 +1,6 @@
 package com.android.mms.preferences;
  
+import com.android.mms.MmsConfig;
 import com.android.mms.R;
 import com.android.mms.ui.MessagingPreferenceActivity;
  
@@ -44,8 +45,7 @@ public class UserAgentListPreference extends ListPreference {
             mUserAgent = prefs
                     .getString(
                             MessagingPreferenceActivity.USER_AGENT,
-                            mContext
-                                    .getString(R.string.pref_key_mms_user_agent_default));
+                            MmsConfig.getUserAgent());
             if (mUserAgent.equals("custom")) {
                 showDialog();
             }
@@ -105,8 +105,7 @@ public class UserAgentListPreference extends ListPreference {
             mUserAgent = prefs
                     .getString(
                             MessagingPreferenceActivity.USER_AGENT,
-                            mContext
-                                    .getString(R.string.pref_key_mms_user_agent_default));
+                            MmsConfig.getUserAgent());
             showDialog();
         }
     }
