@@ -307,4 +307,62 @@
     <string name="storage_limits_setting" msgid="4952781049308537373">"制限を設定"</string>
     <string name="storage_limits_setting_dismiss" msgid="1433841310158458034">"制限しない"</string>
     <string name="too_many_unsent_mms" msgid="8005932837414848242">"今すぐメッセージを送信することはできません。未送信のマルチメディアメッセージが多すぎます。"</string>
+    <!-- Extra settings -->
+    <string name="pref_extra_settings">"追加設定"</string>
+
+    <!-- Toggle setting for enable/disable Send message when Enter key pressed -->
+    <string name="pref_title_mms_send_on_enter">"エンターで送信"</string>
+    <string name="pref_summary_mms_send_on_enter">"エンターキーの押下でメッセージを送信する"</string>
+
+	<!-- Extra settings -->
+    <string name="pref_cosmetic_settings">"見た目の美しさ"</string>
+
+	<!-- Toggle setting for enable/disable Black Background -->
+    <string name="pref_title_mms_black_background">"黒い背景"</string>
+    <string name="pref_summary_mms_black_background">"会話表示に黒い背景を使う"</string>
+
+	<!-- Pref setting for conversation font-size -->
+    <string name="pref_title_mms_conversation_font_size">"フォントサイズ"</string>
+    <string name="pref_summary_mms_conversation_font_size">"メッセージフォントサイズ: <xliff:g id="count">%1$s</xliff:g>"</string>
+	<string name="pref_summary_mms_set_conversation_font_size">"フォントサイズの設定"</string>
+
+	<!-- Toggle for Hiding names in conversation -->
+    <string name="pref_title_conversation_hide_names">"名前を隠す"</string>
+    <string name="pref_summary_conversation_hide_names">"会話表示で名前を表示しない"</string>
+
+    <!-- Change LED color for message notification -->
+    <string name="pref_title_mms_notification_led_settings">"LED設定"</string>
+    <string name="pref_title_mms_notification_led">"LEDを点滅させる"</string>
+    <string name="pref_summary_mms_notification_led">"メッセージを受信したらLEDを点滅させる"</string>
+    <string name="pref_title_mms_notification_led_color">"LEDの色"</string>
+    <string name="pref_summary_mms_notification_led_color">"LEDの色を変更する"</string>
+    <string name="pref_dialogtitle_mms_notification_led_color">"LEDの色を選択してください"</string>
+
+    <string name="pref_mms_notification_led_color_green">"緑/デフォルト"</string>
+    <string name="pref_mms_notification_led_color_white">"白"</string>
+    <string name="pref_mms_notification_led_color_red">"赤"</string>
+    <string name="pref_mms_notification_led_color_blue">"青"</string>
+    <string name="pref_mms_notification_led_color_yellow">"黄"</string>
+    <string name="pref_mms_notification_led_color_cyan">"シアン"</string>
+    <string name="pref_mms_notification_led_color_magenta">"マゼンタ"</string>
+    <string name="pref_mms_notification_led_color_pink">"ピンク"</string>
+    <string name="pref_mms_notification_led_color_orange">"オレンジ"</string>
+    <string name="pref_mms_notification_led_color_light_blue">"空色"</string>
+
+    <string name="pref_title_mms_notification_led_blink_rate">"LEDの点滅間隔"</string>
+    <string name="pref_summary_mms_notification_led_blink_rate">"LEDの点滅間隔を変更する"</string>
+    <string name="pref_dialogtitle_mms_notification_led_blink_rate">"LEDの点滅間隔を選択してください"</string>
+
+    <string name="pref_title_mms_notification_vibrate_settings">"バイブレーションの設定"</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">"振動パターン"</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">"振動のパターンを変更する"</string>
+
+    <string name="pref_title_mms_back_to_all_threads">"スレッド一覧に戻る"</string>
+    <string name="pref_summary_mms_back_to_all_threads">"戻るボタンを押したときに常にスレッド一覧画面に戻る"</string>
+
+    <string name="pref_mms_custom_option">カスタム..</string>
+    <string name="pref_title_mms_user_agent">カスタムUser-Agent</string>
+    <string name="pref_summary_mms_user_agent">MMSクライアントのUser-Agent文字列を変更する</string>
+    <string name="pref_mms_user_agent_custom_set">設定されているUser-Agent:\n</string>
+
 </resources>
