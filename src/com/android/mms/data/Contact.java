@@ -451,7 +451,7 @@ public class Contact {
                 // We update cache entries in place so people with long-
                 // held references get updated.
                 if (get(c.mNumber) != null) {
-                    throw new IllegalStateException("cache already contains " + c);
+                    Log.w("ContactsCache", "cache already contains " + c);
                 }
                 sInstance.mCache.add(c);
             }
