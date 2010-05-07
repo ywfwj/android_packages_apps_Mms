@@ -390,7 +390,12 @@ public class MessagingNotification {
         boolean mBlinkLed = sp.getBoolean(MessagingPreferenceActivity.NOTIFICATION_LED, true);
         if(mBlinkLed) {
             // default color is green: 0xff00ff00
-            int mLedColor = Color.parseColor(sp.getString(MessagingPreferenceActivity.NOTIFICATION_LED_COLOR, "green"));
+            int mLedColor;
+            try {
+                mLedColor = Color.parseColor(sp.getString(MessagingPreferenceActivity.NOTIFICATION_LED_COLOR, "green"));
+            } catch (IllegalArgumentException e) {
+                mLedColor = Color.parseColor("green");
+            }
             notification.ledARGB = mLedColor;
             int mLedBlinkRate = Integer.parseInt(sp.getString(MessagingPreferenceActivity.NOTIFICATION_LED_BLINK_RATE, "2"));
             notification.ledOnMS = 500;
