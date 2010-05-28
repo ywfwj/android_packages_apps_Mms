@@ -90,8 +90,9 @@ public class NumberPickerDialog extends AlertDialog implements OnClickListener {
 
         setTitle(title);
 
-        setButton(context.getText(R.string.set), this);
-        setButton2(context.getText(R.string.no), (OnClickListener) null);
+        setButton(DialogInterface.BUTTON_POSITIVE, context.getText(R.string.set), this);
+        setButton(DialogInterface.BUTTON_NEGATIVE, context.getText(R.string.no),
+                (OnClickListener) null);
 
         LayoutInflater inflater =
                 (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
