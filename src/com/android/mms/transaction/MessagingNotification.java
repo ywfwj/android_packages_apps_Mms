@@ -308,7 +308,7 @@ public class MessagingNotification {
                 context, address, subject, body);
 
         return new MmsSmsNotificationInfo(
-                clickIntent, body, iconResourceId, ticker, timeMillis,
+                clickIntent, body.replace('\f', '\n'), iconResourceId, ticker, timeMillis,
                 senderInfoName, count);
     }
 
@@ -426,7 +426,7 @@ public class MessagingNotification {
         }
 
         if (!TextUtils.isEmpty(body)) {
-            body = body.replace('\n', ' ').replace('\r', ' ');
+            body = body.replace('\n', ' ').replace('\r', ' ').replace('\f', ' ');
             buf.append(body);
         }
 

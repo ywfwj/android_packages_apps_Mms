@@ -228,7 +228,7 @@ public class ConversationHeaderView extends RelativeLayout implements Contact.Up
         setPresenceIcon(contacts.getPresenceResId());
 
         // Subject
-        mSubjectView.setText(ch.getSubject());
+        mSubjectView.setText(ch.getSubject().replace('\f', '\n'));
         LayoutParams subjectLayout = (LayoutParams)mSubjectView.getLayoutParams();
         // We have to make the subject left of whatever optional items are shown on the right.
         subjectLayout.addRule(RelativeLayout.LEFT_OF, hasAttachment ? R.id.attachment :

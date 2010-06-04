@@ -295,6 +295,7 @@ public class MessageListItem extends LinearLayout implements
             if (hasSubject) {
                 buf.append(" - ");
             }
+            body = body.replace('\f', '\n');
             SmileyParser parser = SmileyParser.getInstance();
             buf.append(parser.addSmileySpans(body));
         }
