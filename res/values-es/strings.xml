@@ -26,9 +26,11 @@
     <string name="menu_call_back" msgid="7538482331117914146">"Llamar a <xliff:g id="NAME">%s</xliff:g>"</string>
     <string name="menu_send_email" msgid="671366308915241664">"Enviar mensaje a <xliff:g id="NAME">%s</xliff:g>"</string>
     <string name="menu_compose_new" msgid="3763437973691046238">"Redactar"</string>
+    <string name="menu_mark_all_read">Marcar todos leídos</string>
     <string name="menu_preferences" msgid="4693148116114749414">"Ajustes"</string>
     <string name="menu_add_address_to_contacts" msgid="2313624913486309940">"Añadir <xliff:g id="NAME">%s</xliff:g> a contactos"</string>
     <string name="menu_call" msgid="5877123227307074690">"Llamar"</string>
+    <string name="menu_search" msgid="2289469305728821360">"Buscar"</string>
     <string name="menu_delete_all" msgid="8853352701914512057">"Eliminar conversaciones"</string>
     <string name="menu_delete" msgid="1851666911396479006">"Eliminar cadena"</string>
     <string name="menu_undelivered_messages" msgid="3896857623211780616">"Mensajes no entregados"</string>
@@ -91,7 +93,7 @@
     <string name="open_keyboard_to_compose_message" msgid="1668723196441776085">"Abre el teclado para redactar el mensaje."</string>
     <string name="image_too_large" msgid="261880224164478061">"Imagen demasiado grande"</string>
     <string name="ask_for_automatically_resize" msgid="7657603662407738758">"¿Quieres ajustar el tamaño de la imagen antes de enviarla?"</string>
-    <string name="compressing" msgid="1961357529661045180">"La imagen es demasiado grande. Comprimiendo…"</string>
+    <string name="compressing" msgid="1961357529661045180">"La imagen es demasiado grande. Comprimiendo\u2026"</string>
     <string name="unsupported_media_format" msgid="5037111178813903722">"Formato de <xliff:g id="NAME">%1$s</xliff:g> no admitido"</string>
     <string name="select_different_media" msgid="7573116916321879964">"Selecciona un/a <xliff:g id="NAME">%1$s</xliff:g> diferente."</string>
     <string name="exceed_message_size_limitation" msgid="6027753647094742437">"Se ha alcanzado el límite de tamaño del mensaje."</string>
@@ -104,6 +106,9 @@
     <string name="discard_message_reason" msgid="2667664943003796133">"El mensaje se descartará porque los destinatarios no son válidos."</string>
     <string name="has_invalid_recipient" msgid="1485388396900997383">"Destinatarios no válidos: &lt;<xliff:g id="NAME">%1$s</xliff:g>&gt;"</string>
     <string name="invalid_destination" msgid="7643854177921895615">"La dirección que has introducido no es válida."</string>
+    <string name="service_not_activated" msgid="9178218144019626176">"No se ha activado el servicio en la red."</string>
+    <string name="service_message_not_found" msgid="1908877102600048515">"El mensaje ha caducado o no está disponible."</string>
+    <string name="service_network_problem" msgid="5418984934499160536">"Error de red"</string>
     <string name="invalid_recipient_message" msgid="7315539322634238519">"Corrige la información de destinatarios para que se pueda enviar el mensaje."</string>
     <string name="cannot_send_message" msgid="3918913277571649400">"No se puede enviar el mensaje."</string>
     <string name="cannot_send_message_reason" msgid="8745080126044054343">"Los destinatarios del mensaje no son válidos."</string>
@@ -167,6 +172,14 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"Solicitar un informe de entrega al enviar un mensaje"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Solicitar un informe de mensaje leído al enviar un mensaje"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Solicitar un informe de entrega cada vez que se envíe un mensaje"</string>
+    <!-- Settings item for SMS Split 160 characters setting -->
+    <string name="pref_title_sms_split_160">División SMS</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_160">Dividir los mensajes cada 160 caracteres</string>
+    <!-- Settings item for boolean option for SMS Split Counter -->
+    <string name="pref_title_sms_split_counter">Contador de división</string>
+    <!-- Settings item description for boolean SMS Split 160 characters setting -->
+    <string name="pref_summary_sms_split_counter">Añade un contador a cada mensaje (por ejemplo 1/2)</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"Eliminar mensajes antiguos al superar los límites"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"<xliff:g id="COUNT">%1$s</xliff:g> mensajes por conversación"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"Administrar mensajes de SIM"</string>
@@ -190,11 +203,20 @@
     <string name="prefDialogTitle_vibrateWhen" msgid="6419655771690242118">"Vibración"</string>
     <string name="pref_title_mms_auto_retrieval" msgid="4021878285474431355">"Recuperar automáticamente"</string>
     <string name="pref_summary_mms_auto_retrieval" msgid="925163257363757048">"Recuperar mensajes automáticamente"</string>
-    <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Recuperar autom en itinerancia"</string>
+    <string name="pref_title_mms_retrieval_during_roaming" msgid="6016227402731817804">"Recuperar en itinerancia automáticamente"</string>
     <string name="pref_summary_mms_retrieval_during_roaming" msgid="2427892806582531020">"Recuperar automáticamente mensajes en itinerancia"</string>
+
+    <!-- Setting item for folder to save MMS Attachments to -->
+    <string name="pref_title_save_location">Carpeta de ficheros adjuntos</string>
+    <string name="pref_summary_save_location">Carpeta donde serán guardados los ficheros adjuntos de los mensajes</string>
+
     <string name="to_label" msgid="2355268818058389047">"Para "</string>
     <string name="confirm_dialog_title" msgid="5810813994465120375">"Eliminar"</string>
     <string name="confirm_dialog_locked_title" msgid="8179085718150932242">"¿Quieres eliminar el mensaje bloqueado?"</string>
+  <plurals name="confirm_delete_conversation">
+    <item quantity="one" msgid="350118636090800360">"Se eliminará una conversación."</item>
+    <item quantity="other" msgid="6918094955792544014">"Se eliminarán <xliff:g id="NUMBER">%1$s</xliff:g> conversaciones."</item>
+  </plurals>
     <string name="confirm_delete_conversation" msgid="6115966687389279855">"Se eliminará toda la cadena."</string>
     <string name="confirm_delete_all_conversations" msgid="9036166685235092757">"Se eliminarán todas las conversaciones."</string>
     <string name="confirm_delete_message" msgid="9121480656609809591">"Se eliminará el mensaje."</string>
@@ -204,6 +226,8 @@
     <string name="confirm_delete_SIM_message" msgid="767624259182679915">"Este mensaje se eliminará de la tarjeta SIM."</string>
     <string name="delete_unlocked" msgid="7545321606698162261">"Eliminar mensajes bloqueados"</string>
     <string name="delete" msgid="1409973060081564612">"Eliminar"</string>
+    <string name="select_conversations" msgid="5754828781497722394">"Seleccionar conversaciones"</string>
+    <string name="no_conversations" msgid="2095684444005566703">"No hay conversaciones"</string>
     <string name="cannot_get_details" msgid="6493664168168047746">"No se pueden obtener detalles."</string>
     <string name="message_details_title" msgid="9223295113731634528">"Detalles del mensaje"</string>
     <string name="message_type_label" msgid="7975373966795945566">"Tipo: "</string>
@@ -228,7 +252,7 @@
     <string name="menu_retry_sending" msgid="3146582005568302643">"Reintentar envío"</string>
     <string name="menu_retry_sending_all" msgid="1870529976966340616">"Reintentar envío de todos"</string>
     <string name="menu_delete_messages" msgid="2610286783513247420">"Eliminar mensajes"</string>
-    <string name="retrying_dialog_body" msgid="4738260459043003431">"El mensaje \"<xliff:g id="MESSAGE">%s</xliff:g>\" no se ha enviado debido a un problema de conexión."\n"Reintentando envío…"</string>
+    <string name="retrying_dialog_body" msgid="4738260459043003431">"El mensaje \"<xliff:g id="MESSAGE">%s</xliff:g>\" no se ha enviado debido a un problema de conexión."\n"Reintentando envío\u2026"</string>
     <string name="menu_lock" msgid="136863583207382259">"Bloquear mensaje"</string>
     <string name="menu_unlock" msgid="5264877122797287929">"Desbloquear mensaje"</string>
     <string name="sim_copy_to_phone_memory" msgid="5895767417844881971">"Copiar en memoria del teléfono"</string>
@@ -309,7 +333,7 @@
     <string name="pick_numbers_activity" msgid="2083330191224178637">"Seleccionar números"</string>
     <string name="slideshow_activity" msgid="5658249461317434432">"Presentación"</string>
     <string name="class_0_message_activity" msgid="8474176218999130627">"Mensaje de clase 0"</string>
-    <string name="send_using_mms_activity" msgid="3703434556280345726">"Enviar como mensaje multimedia…"</string>
+    <string name="send_using_mms_activity" msgid="3703434556280345726">"Enviar como mensaje multimedia\u2026"</string>
     <string name="select_contact_method_activity" msgid="1743384358979323991">"Seleccionar método de contacto"</string>
     <string name="search_label" msgid="6042598929386174964">"Mensajes"</string>
     <string name="search_hint" msgid="7183732852849365466">"Buscar mensajes"</string>
@@ -332,7 +356,7 @@
     <string name="storage_limits_setting_dismiss" msgid="1433841310158458034">"Sin límites"</string>
     <string name="too_many_unsent_mms" msgid="8005932837414848242">"En este momento no se puede enviar el mensaje porque hay demasiados mensajes multimedia sin enviar."</string>
     <string name="me" msgid="341726346007839961">"Yo"</string>
-    <string name="sending_message" msgid="222836893217450538">"Enviando…"</string>
+    <string name="sending_message" msgid="222836893217450538">"Enviando\u2026"</string>
     <string name="error_state" msgid="5177386717626893507">"Estado inconsistente"</string>
     <string name="error_state_text" msgid="5006221625000536698">"El estado de las cadenas y de los destinatarios es inconsistente. Realiza un informe de errores y envíalo a android-sms-bugs@google.com."</string>
 
@@ -345,7 +369,7 @@
 
     <!-- Toggle setting for enable/disable Black Background -->
     <string name="pref_title_mms_black_background">Fondo negro</string>
-    <string name="pref_summary_mms_black_background">Habilitar/deshabilitar fondo oscuro\n(Reiniciar Mms)</string>
+    <string name="pref_summary_mms_black_background">Habilitar/deshabilitar fondo oscuro\n(Reiniciar aplicación)</string>
 
     <!-- Toggle setting for always show character counter -->
     <string name="pref_title_show_counter_always">Mostrar siempre contador de caracteres</string>
@@ -404,7 +428,7 @@
     <string name="pref_title_template_gestures_sensitivity">Sensibilidad del gesto</string>
     <string name="template_save">Guardar</string>
     <string name="template_insert_hint">Escribir el texto para plantilla</string>
-    <string name="template_empty_text">No puede quedar en blanco</string>
+    <string name="template_empty_text">El texto no puede quedar en blanco</string>
     <string name="template_explanation">Insertar o modificar el texto para plantilla y opcionalmente añadir un gesto asociado</string>
     <string name="template_edit">Editar</string>
     <string name="template_delete">Borrar</string>
