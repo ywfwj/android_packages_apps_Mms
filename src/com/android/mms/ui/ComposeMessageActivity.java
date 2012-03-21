@@ -3754,7 +3754,11 @@ public class ComposeMessageActivity extends Activity
                 // Rebuild the message list so each MessageItem will get the last contact info.
                 ComposeMessageActivity.this.mMsgListAdapter.notifyDataSetChanged();
 
-                if (mRecipientsEditor != null) {
+                // Only update mRecipientsEditor if some of the contacts exist in the database to
+                // avoid repeatedly moving the cursor back to the beginning of mRecipientsEditor
+                // when creating a new message.
+                // http://code.google.com/p/cyanogenmod/issues/detail?id=4068
+                if (mRecipientsEditor != null && recipients.anyExistInDatabase()) {
                     mRecipientsEditor.populate(recipients);
                 }
             }
