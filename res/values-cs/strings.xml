@@ -168,6 +168,8 @@
     <string name="pref_summary_mms_delivery_reports" msgid="4874657984217756112">"U každé odeslané zprávy požadovat potvrzení o doručení"</string>
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"U každé odeslané zprávy požadovat potvrzení o přečtení"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"U každé odeslané zprávy požadovat potvrzení o doručení"</string>
+    <string name="pref_title_max_sms_length">Maximální délka SMS zprávy</string>
+    <string name="pref_summary_max_sms_length">Maximální povolená délka zprávy při psaní</string>
     <string name="pref_title_sms_split_160">"Rozdělit SMS"</string>
     <string name="pref_summary_sms_split_160">"Rozdělit zprávu po každých 160 znacích"</string>
     <string name="pref_title_sms_split_counter">"Počítadlo zpráv"</string>
