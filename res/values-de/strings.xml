@@ -170,6 +170,8 @@
     <string name="pref_summary_mms_read_reports" msgid="2748323864008907440">"Lesebestätigung für jede gesendete Nachricht anfordern"</string>
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"Zustellbestätigung für jede gesendete Nachricht anfordern"</string>
 
+    <string name="pref_title_max_sms_length">Maximale SMS-Länge</string>
+    <string name="pref_summary_max_sms_length">Obergrenze für die Länge von zusammengesetzten SMS-Nachrichten</string>
     <string name="pref_title_sms_split_160">SMS-Teilung</string>
     <string name="pref_summary_sms_split_160">SMS-Nachricht alle 160 Zeichen teilen</string>
     <string name="pref_title_sms_split_counter">Zähler in SMS</string>
