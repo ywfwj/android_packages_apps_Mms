@@ -367,6 +367,10 @@
     <!-- Extra Settings: -->
     <string name="pref_extra_settings">Opciones extra</string>
 
+    <!-- Strip unicode -->
+    <string name="pref_title_strip_unicode">Eliminar unicode</string>
+    <string name="pref_summary_strip_unicode">Sustituir los caracteres que no son compatibles en los mensajes SMS</string>
+
     <!-- Back to all threads -->
     <string name="pref_title_mms_back_to_all_threads">Volver a las conversaciones</string>
     <string name="pref_summary_mms_back_to_all_threads">Volver a todas las conversaciones cuando se pulse el botón atrás</string>
