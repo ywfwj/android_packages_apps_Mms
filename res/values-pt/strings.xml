@@ -403,7 +403,6 @@
     <string name="desc_mms_push">Envia MMS da caixa de saída para a rede</string>
     <string name="pref_title_input_type">Tipo de teclado virtual</string>
     <string name="pref_summary_input_type">Selecione o tipo de teclado virtual para ser usado ao compor mensagens</string>
-    <string name="pref_keyboard_send">Enter para Enviar</string>
     <string name="pref_keyboard_new_line">Enter para uma nova linha</string>
     <string name="menu_add_to_calendar">Adicionar ao calendário</string>
     <string name="pref_keyboard_emoji">Exibir a tecla de Emoticons</string>

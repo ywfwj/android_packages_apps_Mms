@@ -407,7 +407,7 @@
 
     <!-- Soft Keyboard Type -->
     <string name="pref_keyboard_emoji">Zobrazit klávesu pro smajlíky</string>
-    <string name="pref_keyboard_send">Zobrazit klávesu Enter</string>
+    <string name="pref_keyboard_new_line">Zobrazit klávesu Enter</string>
     <string name="pref_keyboard_unknown">Neplatná volba, zkuste to znovu</string>
 
     <!-- QUICKMESSAGE SUPPORT -->

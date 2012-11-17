@@ -434,7 +434,6 @@
 
     <!-- Soft Keyboard Type -->
     <string name="pref_keyboard_emoji">Smiley</string>
-    <string name="pref_keyboard_send">Send med Enter</string>
     <string name="pref_keyboard_new_line">Ny linje med Enter</string>
 
     <string name="label_mms_push">MMS-push</string>
