@@ -173,6 +173,8 @@
     <string name="pref_summary_notification_vibrateWhen" msgid="669655090822561447">"Vibrar también al notificar"</string>
     <string name="pref_title_notification_ringtone" msgid="5467265237106229952">"Seleccionar tono"</string>
     <string name="pref_messages_to_save" msgid="3202539743892934926">"Elige el número de mensajes que quieres guardar"</string>
+    <string name="pref_title_input_type">Tipo de teclado</string>
+    <string name="pref_summary_input_type">Comportamiento de la tecla Entrar al escribir mensajes</string>
   <string-array name="prefEntries_vibrateWhen">
     <item msgid="2520871831815631409">"Siempre"</item>
     <item msgid="6069709696037750627">"Solo en modo silencio"</item>
@@ -386,8 +388,11 @@
     <string name="pref_summary_mms_full_timestamp">"Mostrar fecha y hora en las marcas de tiempo"</string>
     <string name="pref_title_mms_use_sent_timestamp">"Marca de tiempo original"</string>
     <string name="pref_summary_mms_use_sent_timestamp">"Mostrar fecha de envío en lugar de la fecha de recepción en las marcas de tiempo"</string>
-    <string name="pref_quickmessage">Mensaje Rápido</string>
-    <string name="pref_quickmessage_title">Habilitar mensaje rápido</string>
+    <string name="pref_keyboard_emoji">Mostrar tecla de emoticonos</string>
+    <string name="pref_keyboard_new_line">Mostrar tecla Entrar</string>
+    <string name="pref_keyboard_unknown">Desconocido. Por favor, seleccionar nuevamente</string>
+    <string name="pref_quickmessage">Mensaje rápido</string>
+    <string name="pref_quickmessage_title">Mostrar mensaje rápido</string>
     <string name="pref_quickmessage_summary">Muestra el cuadro de diálogo para mensaje rápido</string>
     <string name="pref_wake_unlock_title">Despertar y desbloquear</string>
     <string name="pref_wake_unlock_summary">Despierta y desbloquea el dispositivo al recibir un mensaje (solamente con bloqueo de pantalla)</string>
@@ -402,4 +407,6 @@
     <string name="type_to_reply_text_enter_to_send">Escribir mensaje</string>
     <string name="toast_sending_message">Enviando mensaje\u2026</string>
     <string name="qm_quick_reply">Responder</string>
+    <string name="qm_mark_read">Leer</string>
+    <string name="menu_add_to_calendar">Añadir al calendario</string>
 </resources>
