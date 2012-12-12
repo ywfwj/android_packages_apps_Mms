@@ -92,7 +92,6 @@
     <string name="failed_to_resize_image" msgid="5608354151631833669">"Imagem não redimensionada."</string>
     <string name="resize_image_error_information" msgid="3783200130776554475">"Esta imagem é demasiado grande para enviar, mesmo quando redimensionada."</string>
     <string name="forward_prefix" msgid="276280492803486464">"Fwd: "</string>
-    <string name="discard_message" msgid="6078326880056142781">"Rejeitar"</string>
     <string name="discard_message_reason" msgid="2667664943003796133">"A mensagem será rejeitada porque não tem destinatários válidos."</string>
     <string name="has_invalid_recipient" msgid="1485388396900997383">"Recipiente(s) inválido(s): &lt;<xliff:g id="NAME">%1$s</xliff:g>&gt;"</string>
     <string name="invalid_destination" msgid="4573835601024786416">"Endereço de destino inválido."</string>
@@ -389,10 +388,6 @@
     <string name="pref_summary_mms_notification_vibrate_call">Permitir vibração durante uma chamada</string>
     <string name="pref_title_mms_notification_vibrate_custom">Personalizar padrão de vibração</string>
     <string name="pref_text_mms_notification_vibrate_custom">Formato desligado/ligado em milissegundos: desligado, ligado, desligado, ...</string>
-    <string name="pref_title_sms_EnableMultipartSMS">SMS para MMS</string>
-    <string name="pref_summary_sms_EnableMultipartSMS">Transformar mensagens SMS longas em MMS</string>
-    <string name="pref_title_sms_SmsToMmsTextThreshold">Contar SMS</string>
-    <string name="pref_summary_sms_SmsToMmsTextThreshold">"<xliff:g id="COUNT" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%1$s</xliff:g> mensagens antes da conversão para MMS"</string>
     <string name="pref_wake_unlock_title">Despertar e desbloquear</string>
     <string name="pref_wake_unlock_summary">Desperta e desbloqueia o dispositivo quando uma mensagem é recebida (apenas para ecrãs de bloqueio inseguros)</string>
     <string name="pref_close_all_title">Fechar tudo</string>
