@@ -438,5 +438,8 @@
 
     <!-- QM - Quick reply -->
     <string name="qm_quick_reply">Schnellantwort</string>
+    <string name="qm_mark_read">Gelesen</string>
 
+    <!-- Add menu for 'Add SMS to calendar remind' -->
+    <string name="menu_add_to_calendar">Zu Kalender hinzufügen</string>
 </resources>
